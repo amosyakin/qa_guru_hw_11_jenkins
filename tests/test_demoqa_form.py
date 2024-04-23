@@ -7,9 +7,9 @@ from qa_gure_5_hw_selene.model.pages.registration_page import RegistrationPage
 @allure.tag("WEB")
 @allure.severity(Severity.NORMAL)
 @allure.feature("Форма регистрации")
-@allure.story("Заполнение и проверка формы регистрации")
+@allure.title("Заполнение и проверка формы регистрации")
 @allure.link("https://demoqa.com/automation-practice-form", name="DEMOQA")
-def test_submit_form():
+def test_submit_form(setup_browser):
     with allure.step("Открыть форму регистрации"):
         registration_page = RegistrationPage()
         registration_page.open()
